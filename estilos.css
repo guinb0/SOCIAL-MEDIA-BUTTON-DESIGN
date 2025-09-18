@@ -1,0 +1,74 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Body */
+
+body {
+	background: #35033d;
+}
+
+
+/* Container */
+
+.container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* Lista de Botones */
+
+.container ul {
+	list-style: none;
+	display: flex;
+}
+
+.container ul li {
+	padding: 50px;
+}
+
+.container ul li a {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px;
+	height: 60px;
+	border-radius: 20px;
+	font-size: 2.5em;
+	background: #4d434f;
+	color: #9d8ca0;
+	transition: 0.4s;
+}
+
+.container ul li a::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+	background: var(--color);
+	transition: 0.4s;
+	transform: scale(0.9);
+	z-index: -1;
+}
+
+.container ul li a:hover::before {
+	transform: scale(1.3) rotate(45deg);
+	box-shadow: 0 0 25px var(--color);
+}
+
+.container ul li a:hover {
+	color: var(--color);
+	box-shadow: 0 0 15px var(--color);
+}
